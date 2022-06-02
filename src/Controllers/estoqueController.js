@@ -27,8 +27,10 @@ static listarEstoque = (req, res) => {
                 if(err) {
                     res.status(500).send({message: `${err.message} - falha ao cadastrar o Produto.`})
                 } else {
-                    res.status(201).send({message: "Produto cadastrada com sucesso"})
-                }
+                    res.status(201).send({message: "Produto cadastrado com sucesso",
+            
+                                          "Produto": controle                                })
+}
         })
         }
 

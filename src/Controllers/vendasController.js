@@ -26,7 +26,9 @@ class VendaController {
         if(err) {
             res.status(500).send({message: `${err.message} - falha a ocadastrar venda.`})
         } else {
-            res.status(201).send({message: "venda cadastrada com sucesso"})
+            res.status(201).send({message: "venda cadastrada com sucesso",
+            
+                                  "Venda": venda                                })
         }
 })
 }
@@ -48,9 +50,9 @@ static excluirVendas = (req, res) =>{
 
     vendas.findByIdAndDelete(id, (err) =>{
         if(!err){
-            res.status(200).send({message: 'Venda removida com sucesso'})
+            res.status(200).send({message: `Venda com ID ${id} removida com sucesso` })
         } else {
-            res.status(500).send({message: err.message})
+            res.status(500).send({message: "ID não localizado"})
         }
     })
 }

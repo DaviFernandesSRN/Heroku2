@@ -20,6 +20,7 @@ const aluguelSchema = new mongoose.Schema(
             "Fornecedor": {type: String, required: true},
             "id_Fornecedores": {type: String, required: true},
              "Avaliação": {type: Number}
+             
          
 }
 );

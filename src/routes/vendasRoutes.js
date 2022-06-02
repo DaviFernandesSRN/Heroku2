@@ -11,4 +11,3 @@ router
     .delete("/vendas/:id", VendasController.excluirVendas)
 
 export default router;
-

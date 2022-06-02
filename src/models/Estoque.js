@@ -15,11 +15,13 @@ const estoqueSchema = new mongoose.Schema(
             "Fornecedor": {type: String, required: true},
             "id_Fornecedores": {type: String, required: true},
             "Avaliação": {type: Number},
-            "NF": {type: Number}
-
+            "NF": {type: Number},
+            "imagem":{type: String, required: true},
+            "img": {data: Buffer, bcontentType: String}
+        
     }
 );
 
-const estoque = mongoose.model('estoque', estoqueSchema);
+const estoque= mongoose.model('estoque', estoqueSchema);
 
 export default estoque;

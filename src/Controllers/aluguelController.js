@@ -26,7 +26,8 @@ class AluguelController {
         if(err) {
             res.status(500).send({message: `${err.message} - falha ao cadastrar Aluguel.`})
         } else {
-            res.status(201).send({message: "Aluguel cadastrado com sucesso"})
+            res.status(200).send({message: "Aluguel cadastrado com sucesso",
+                                 "Aluguel": Novoaluguel})
         }
 })
 }
