@@ -3,11 +3,11 @@ import express from "express";
 import db from "../config/dbconnect.js"
 //importando o arquivo de rotas 
 import routes from "../routes/index.js"
-
 db.on("error", console.log.bind(console, 'Erro de conexão com banco de dados'))
 db.once("open", () => {
     console.log("Conexão com o banco feita com sucesso")
 })
+
 
 //instancia do express
 const app = express();
